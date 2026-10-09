@@ -15,6 +15,7 @@ They read English translations of Korean sermons aloud on camera, using a laptop
 ## Commands
 - `npm install` (once), then `npm test`: replay scenarios plus 65 feature checks in headless Chromium (under a minute).
   In the Claude Code cloud sandbox, Playwright is global: `NODE_PATH=$(npm root -g) npm test`.
+  `PW_CHANNEL=chrome npm test` uses an installed Google Chrome instead of Playwright's Chromium (GitHub does this).
 - `npm run replay -- path/to/log.json [--trace]`: compares a real session against the current code.
 - `npm run package`: rebuilds `handoff/speech-scroll-handoff.zip` for chat-based work.
 
